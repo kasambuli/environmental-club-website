@@ -7,11 +7,10 @@ import Registration from './views/Authentication/Registration'
 function App() {
   return (
     <div className="container">
-      <h1>Environmental Club</h1>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <SignIn /> */}
       {/* <Registration /> */}
-      <Programmes />
+      {/* <Programmes /> */}
     </div>
   );
 }
