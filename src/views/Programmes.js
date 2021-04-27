@@ -1,5 +1,6 @@
 import Header from '../components/Header'
-import Button from '../components/Button'
+// import Button from '../components/Button'
+import Buttons from '../components/Buttons'
 import Footer from '../components/Footer'
 import Program from '../components/Program'
 const Programmes = () => {
@@ -57,7 +58,7 @@ const Programmes = () => {
                 <div className="join">
                     <h3>Why join?</h3>
                     <p>Lorem Ipsum</p>
-                    <Button text="Register" />
+                    <Buttons text="Register" />
                 </div>
                 <Footer />
 
