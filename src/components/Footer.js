@@ -20,8 +20,7 @@ const useStyles = makeStyles({
         fontSize: '24px',
         lineHeight: '28px',
         color: '#000000',
-        paddingTop: '40px',
-        paddingBottom: '40px'
+        padding: '40px 40px',
     },
     listItems: {
         width: '93px',

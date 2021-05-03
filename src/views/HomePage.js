@@ -14,13 +14,11 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '24px',
         color: '#000000',
         textAlign: "center",
-        paddingBottom: "50px",
-        paddingRight: "400px"
+        padding: "0 350px 50px 0"
     },
     partners: {
         marginLeft: "350px",
-        paddingTop: "50px",
-        paddingBottom: "100px"
+        padding:"50px 0 100px 0"
     },
     control: {
         padding: theme.spacing(2)
