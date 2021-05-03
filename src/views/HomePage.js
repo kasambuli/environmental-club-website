@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     partners: {
         marginLeft: "350px",
-        padding:"50px 0 100px 0"
+        padding: "50px 0 100px 0"
     },
     control: {
         padding: theme.spacing(2)
@@ -36,32 +36,49 @@ const useStyles = makeStyles((theme) => ({
 }))
 const HomePage = () => {
     const classes = useStyles()
+    const sectionData = [{
+        title: "About", content: "This is an about section", text: "View More", src: "https://via.placeholder.com/436x242"
+    },
+    {
+        title: "Programmes", content: "This is a programmes section", text: "View More", src: "https://via.placeholder.com/436x242"
+
+    },
+    {
+        title: "Registration", content: "This is a registration section", text: "Register", src: "https://via.placeholder.com/436x242"
+    }]
+
+    const headerImages = [{
+        src: "https://via.placeholder.com/258x318", text: "ZANZIBAR SPICE TOUR"
+
+    },
+    {
+        src: "https://via.placeholder.com/258x318", text: "SLAVE TRADE TOUR"
+    },
+    {
+        src: "https://via.placeholder.com/258x318", text: "MWALIMU NYERERE TOUR"
+    },
+    {
+        src: "https://via.placeholder.com/258x318", text: "KIGALI REMEMBERANCE TOUR"
+    }
+
+    ]
     return (
         <div>
-
             <div className={classes.navbar}><Header /></div>
             <div className={classes.header}>
                 <div className={classes.control}>
-
                     <Grid container spacing={1} direction="row" justify="center" alignItems="flex-end">
-                        <Grid item md={3} xl={3} xs={12} sm={6}>
-                            <Image src="https://via.placeholder.com/258x318" text="ZANZIBAR SPICE TOUR" />
-                        </Grid>
-                        <Grid item md={3} xl={3} xs={12} sm={6}>
-                            <Image src="https://via.placeholder.com/258x318" text="SLAVE TRADE TOUR" />
-                        </Grid>
-                        <Grid item md={3} xl={3} xs={12} sm={6}>
-                            <Image src="https://via.placeholder.com/258x318" text="MWALIMU NYERERE TOUR" />
-                        </Grid>
-                        <Grid item md={3} xl={3} xs={12} sm={6}>
-                            <Image src="https://via.placeholder.com/258x318" text="KIGALI REMEMBERANCE TOUR" />
-                        </Grid>
+                        {headerImages.map(data => (
+                            <Grid item md={3} xl={3} xs={12} sm={6}>
+                                <Image src={data.src} text={data.text} />
+                            </Grid>
+                        ))}
                     </Grid>
                 </div>
             </div>
-            <Section title="About" content="This is an about section" text="View More" src="https://via.placeholder.com/436x242" />
-            <Section title="Programmes" content="This is a programmes section" text="View More" src="https://via.placeholder.com/436x242" />
-            <Section title="Registration" content="This is a registration section" text="Register" src="https://via.placeholder.com/436x242" />
+            {sectionData.map(section => (
+                <Section title={section.title} content={section.content} text={section.text} src={section.src} />
+            ))}
 
             <Carousel src="https://via.placeholder.com/436x242" content="This is a testimonial" />
 
