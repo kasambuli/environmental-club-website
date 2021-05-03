@@ -1,6 +1,5 @@
 import Header from '../../components/Header'
-// import Button from '../../components/Button'
-import Buttons from '../../components/Buttons'
+import Button from '../../components/Buttons'
 import Image from '../../components/Image'
 import Footer from '../../components/Footer'
 const Registration = () => {
@@ -12,7 +11,7 @@ const Registration = () => {
                 <input type="text" placeholder="Email Address" />
                 <input type="text" placeholder="Create Password" />
                 <input type="text" placeholder="Confirm Password" />
-                <Buttons text="Register" />
+                <Button text="Register" />
                 <a href="#">Sign In</a>
             </form>
             <Image src="https://via.placeholder.com/150" />

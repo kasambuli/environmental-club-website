@@ -1,5 +1,5 @@
 import Header from '../components/Header'
-import Buttons from '../components/Buttons'
+import Button from '../components/Buttons'
 import Footer from '../components/Footer'
 import Program from '../components/Program'
 const Programmes = () => {
@@ -57,7 +57,7 @@ const Programmes = () => {
                 <div className="join">
                     <h3>Why join?</h3>
                     <p>Lorem Ipsum</p>
-                    <Buttons text="Register" />
+                    <Button text="Register" />
                 </div>
                 <Footer />
 

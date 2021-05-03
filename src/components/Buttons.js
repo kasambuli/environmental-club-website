@@ -17,12 +17,12 @@ const useStyles = makeStyles({
         fontWeight: "normal",
         lineHeight: "25px",
         textAlign: "center",
-        border:'0px'
+        border: '0px'
 
     }
 })
-const Buttons = ({ text }) => {
+const Button = ({ text }) => {
     const classes = useStyles();
     return <button className={classes.button}>{text}</button>
 }
-export default Buttons
+export default Button

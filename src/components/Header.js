@@ -1,5 +1,6 @@
-import { AppBar, Toolbar, Button, Typography, IconButton } from "@material-ui/core"
-import Buttons from "./Buttons";
+import { AppBar, Toolbar, IconButton } from "@material-ui/core"
+import Button from "./Buttons";
+import Image from './Image';
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -39,7 +40,7 @@ const Header = () => {
         <div className={classes.root}>
             <AppBar position="static" className={classes.navbar}>
                 <Toolbar>
-                    <img src="https://via.placeholder.com/40" alt="" />
+                    <Image src="https://via.placeholder.com/40" alt="" />
                     <div className={classes.button}>
                         <IconButton className={classes.title}>
                             About
@@ -55,8 +56,8 @@ const Header = () => {
                         </IconButton>
                     </div>
                     <div >
-                        <Buttons text="Sign In" className={classes.authentication} />
-                        <Buttons text="Register" className={classes.authentication} />
+                        <Button text="Sign In" className={classes.authentication} />
+                        <Button text="Register" className={classes.authentication} />
                     </div>
 
                 </Toolbar>

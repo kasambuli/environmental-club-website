@@ -1,6 +1,6 @@
 import Image from './Image'
 import { Grid } from '@material-ui/core';
-import Buttons from './Buttons'
+import Button from './Buttons'
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -48,7 +48,7 @@ const Section = ({ title, content, text, src }) => {
                 <Grid item md={6} xl={6} xs={12} sm={6}>
                     <h4 className={classes.title}>{title}</h4>
                     <p className={classes.content}>{content}</p>
-                    <Buttons text={text} />
+                    <Button text={text} />
                 </Grid>
 
             </Grid>
