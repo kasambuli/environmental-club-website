@@ -1,9 +1,9 @@
 const Program = ({ content }) => {
-    return (
-        <div>
-            <p>{content}</p>
-        </div>
-    )
-}
+	return (
+		<div>
+			<p>{content}</p>
+		</div>
+	);
+};
 
-export default Program
+export default Program;

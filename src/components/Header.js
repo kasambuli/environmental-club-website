@@ -1,70 +1,44 @@
-import { AppBar, Toolbar, IconButton } from "@material-ui/core"
+import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core";
 import Button from "./Buttons";
-import Image from './Image';
+import Image from "./Image";
 import { makeStyles } from "@material-ui/core/styles";
+import {
+	HEADER_ICON_BUTTONS as iconbuttons,
+	AUTHENTICATION_BUTTONS as authButtons
+} from "../data/constants";
 
 const useStyles = makeStyles({
-    root: {
-        flexGrow: 1,
-        backgroundColor: "transparent"
-    },
-    button: {
-        width: "420px",
-        height: "25px",
-        left: '285px',
-        top: '36px',
-        fontFamily: 'Roboto',
-        fontStyle: 'normal',
-        fontWeight: 'normal',
-        fontSize: '31px',
-        lineHeight: '25px',
-        color: 'black',
-        textAlign: "center",
-        flexGrow: "1"
-    },
-    authentication: {
-        display: "flex",
-        marginLeft: "auto"
-    },
-    navbar: {
-        backgroundColor: "inherit"
-    },
-    title: {
-        flexGrow: 1,
-    },
-
-})
+	root: {
+		flexGrow: 1,
+		backgroundColor: "transparent"
+	},
+	authentication: {
+		display: "flex",
+		marginLeft: "auto"
+	},
+	navbar: {
+		backgroundColor: "inherit"
+	}
+});
 const Header = () => {
-    const classes = useStyles()
-    return (
-        <div className={classes.root}>
-            <AppBar position="static" className={classes.navbar}>
-                <Toolbar>
-                    <Image src="https://via.placeholder.com/40" alt="" />
-                    <div className={classes.button}>
-                        <IconButton className={classes.title}>
-                            About
-                        </IconButton>
-                        <IconButton className={classes.title}>
-                            Programmes
-                        </IconButton>
-                        <IconButton className={classes.title}>
-                            Cohorts
-                        </IconButton>
-                        <IconButton className={classes.title}>
-                            Gallery
-                        </IconButton>
-                    </div>
-                    <div >
-                        <Button text="Sign In" className={classes.authentication} />
-                        <Button text="Register" className={classes.authentication} />
-                    </div>
+	const classes = useStyles();
+	return (
+		<div className={classes.root}>
+			<AppBar position="static" className={classes.navbar}>
+				<Toolbar>
+					<Image src="https://via.placeholder.com/40" />
+					<Typography variant="subtitle1">
+						{iconbuttons.map((button) => (
+							<IconButton variant="h1">{button.title}</IconButton>
+						))}
+					</Typography>
+					{authButtons.map((auth) => (
+						<Button text={auth.text} className={classes.authentication} />
+					))}
+				</Toolbar>
+			</AppBar>
+		</div>
+	);
+};
 
-                </Toolbar>
-
-            </AppBar>
-        </div>
-    )
-}
-
-export default Header
+export default Header;
