@@ -84,6 +84,30 @@ export const theme = createMuiTheme({
 			fontSize: "24px",
 			lineHeight: "28px",
 			color: "#000000"
+		},
+		subtitle2: {
+			width: "121px",
+			height: "47px",
+			padding: "206px 0px 0 148px",
+			fontFamily: "Roboto",
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: "40px",
+			lineHeight: "47px",
+			color: "#000000"
+		},
+		caption: {
+			width: "274px",
+			height: "24px",
+			paddingLeft: "60px",
+			marginTop: "541px",
+			fontFamily: "Montserrat",
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: "15px",
+			lineHeight: "24px",
+			letterSpacing: "-0.015em",
+			color: "black"
 		}
 	}
 });
