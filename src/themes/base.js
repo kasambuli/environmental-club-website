@@ -90,9 +90,12 @@ export const theme = createMuiTheme({
 			fontFamily: "Roboto",
 			fontStyle: "normal",
 			fontWeight: "normal",
-			fontSize: "40px",
+			fontSize: "30px",
 			lineHeight: "8",
-			color: "#000000"
+			color: "#000000",
+			height: "57px",
+			display: "flex",
+			alignItems: "center",
 		}
 	}
 });

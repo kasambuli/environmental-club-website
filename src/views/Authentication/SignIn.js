@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 const SignIn = () => {
 	const classes = useStyles();
 	return (
-		<div>
+		<>
 			<Header />
 			<Grid container spacing={1} direction="row" justify="center" alignItems="flex-end">
 				<Grid item md={6} xl={6} xs={12} sm={6}>
@@ -47,7 +47,7 @@ const SignIn = () => {
 				</Grid>
 			</Grid>
 			<Footer />
-		</div>
+		</>
 	);
 };
 
