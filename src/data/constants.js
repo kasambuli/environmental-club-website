@@ -133,4 +133,18 @@ export const LOREM_IPSUM_TEXT = [
 	{
 		text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum."
 	}
-]
+];
+export const ACTIVITIES = [
+	{
+		text: "Activity Here"
+	},
+	{
+		text: "Activity Here"
+	},
+	{
+		text: "Activity Here"
+	},
+	{
+		text: "Activity Here"
+	},
+];
