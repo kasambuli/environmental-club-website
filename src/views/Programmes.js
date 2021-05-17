@@ -5,6 +5,8 @@ import Program from "../components/Program";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 import { LOREM_IPSUM_TEXT as loremIpsumText, ACTIVITIES as activties } from "../data/constants"
+import { GrStar } from 'react-icons/gr';
+
 const useStyles = makeStyles((theme) => ({
 	title: {
 		height: "242px",
@@ -31,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
 		margin: "-101px 0px 80px 0px ",
 	},
 	activities: {
-		width: "135px",
 		paddingLeft: "228px",
 		fontFamily: "Roboto",
 		fontStyle: "normal",
@@ -50,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
 	button: {
 		paddingLeft: "200px"
 	},
-	activitiesDiv:{
-		marginBottom:"100px"
+	activitiesDiv: {
+		marginBottom: "100px"
 	}
 }
 
@@ -74,26 +75,26 @@ const Programmes = () => {
 			))}
 
 			<Typography variant="subtitle2">Program Activities</Typography>
-			<div className ={classes.activitiesDiv}>
+			<div className={classes.activitiesDiv}>
 				<Grid container spacing={1}>
 					{activties.map((data) => (
 						<Grid item md={4} xs={6}>
-							<p className={classes.activities}>{data.text}</p>
+							<p className={classes.activities}>	<GrStar />{data.text}</p>
 						</Grid>
 					))}
 					{activties.map((data) => (
 						<Grid item md={4} xs={6}>
-							<p className={classes.activities}>{data.text}</p>
+							<p className={classes.activities}><GrStar />{data.text}</p>
 						</Grid>
 					))}
 					{activties.map((data) => (
 						<Grid item md={4} xs={6}>
-							<p className={classes.activities}>{data.text}</p>
+							<p className={classes.activities}><GrStar />{data.text}</p>
 						</Grid>
 					))}
 				</Grid>
 			</div>
-		
+
 			<div className={classes.join}>
 				<Grid container spacing={1}>
 					<Grid item md={4} xs={6}>
