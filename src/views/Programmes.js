@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 import { LOREM_IPSUM_TEXT as loremIpsumText, ACTIVITIES as activties } from "../data/constants"
 import { GrStar } from 'react-icons/gr';
+import Slider from '../components/Slider';
 
 const useStyles = makeStyles((theme) => ({
 	title: {
@@ -70,9 +71,20 @@ const Programmes = () => {
 				<source src="#" type="video/mp4" />
 			</video>
 			<p className={classes.paragraph1}>{loremIpsumText[0].text}</p>
-			{loremIpsumText.map((data) => (
-				<Program content={data.text} />
-			))}
+
+			<Grid container spacing={1}>
+				<Grid item md={2} xl={2} xs={12} sm={6}>
+					<Slider />
+				</Grid>
+
+				<Grid item md={10} xl={10} xs={12} sm={6}>
+					{loremIpsumText.map((data) => (
+						<Program content={data.text} />
+					))}
+				</Grid>
+
+			</Grid>
+
 
 			<Typography variant="subtitle2">Program Activities</Typography>
 			<div className={classes.activitiesDiv}>
