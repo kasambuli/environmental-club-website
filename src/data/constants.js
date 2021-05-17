@@ -81,20 +81,6 @@ export const CONTACT_ITEMS = [
 		contact: "Phone"
 	}
 ];
-export const FOOTER_IMAGES = [
-	{
-		src: "#"
-	},
-	{
-		src: "#"
-	},
-	{
-		src: "#"
-	},
-	{
-		src: "#"
-	}
-];
 export const HEADER_ICON_BUTTONS = [
 	{
 		title: "About"
