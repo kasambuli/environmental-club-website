@@ -85,23 +85,12 @@ const Programmes = () => {
 
 			</Grid>
 
-
 			<Typography variant="subtitle2">Program Activities</Typography>
 			<div className={classes.activitiesDiv}>
 				<Grid container spacing={1}>
 					{activties.map((data) => (
 						<Grid item md={4} xs={6}>
 							<p className={classes.activities}>	<GrStar />{data.text}</p>
-						</Grid>
-					))}
-					{activties.map((data) => (
-						<Grid item md={4} xs={6}>
-							<p className={classes.activities}><GrStar />{data.text}</p>
-						</Grid>
-					))}
-					{activties.map((data) => (
-						<Grid item md={4} xs={6}>
-							<p className={classes.activities}><GrStar />{data.text}</p>
 						</Grid>
 					))}
 				</Grid>
