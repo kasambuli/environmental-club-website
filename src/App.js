@@ -7,10 +7,10 @@ import Registration from "./views/Authentication/Registration";
 function App() {
 	return (
 		<div className="container">
-			<HomePage />
+			{/* <HomePage /> */}
 			{/* <SignIn /> */}
 			{/* <Registration /> */}
-			{/* <Programmes /> */}
+			<Programmes />
 		</div>
 	);
 }
