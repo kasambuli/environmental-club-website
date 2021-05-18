@@ -2,14 +2,8 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 export const theme = createMuiTheme({
 	typography: {
-		h3: {
-			fontFamily: "Roboto",
-			fontStyle: "normal",
-			fontWeight: "bold",
-			fontSize: "24px",
-			color: "#000000",
-			textAlign: "center",
-			padding: "0 50px 50px 0"
+		h1: {
+			flexGrow: 1
 		},
 		h2: {
 			fontSize: "21px",
@@ -21,17 +15,14 @@ export const theme = createMuiTheme({
 			textAlign: "center",
 			color: "white"
 		},
-		body1: {
-			marginLeft: "50px",
-			marginTop: "100px",
-			width: "573px",
-			height: "99px",
+		h3: {
 			fontFamily: "Roboto",
 			fontStyle: "normal",
-			fontWeight: "normal",
+			fontWeight: "bold",
 			fontSize: "24px",
-			lineHeight: "28px",
-			color: "#000000"
+			color: "#000000",
+			textAlign: "center",
+			padding: "0 50px 50px 0"
 		},
 		h4: {
 			fontFamily: "Roboto",
@@ -50,8 +41,35 @@ export const theme = createMuiTheme({
 			lineHeight: "28px",
 			color: "#000000"
 		},
-		h1: {
-			flexGrow: 1
+		h6: {
+			height: "50px",
+			fontFamily: "Roboto",
+			fontStyle: "normal",
+			fontWeight: "bold",
+			fontSize: "24px",
+			lineHeight: "28px",
+			color: "#000000"
+		},
+		body1: {
+			marginLeft: "50px",
+			marginTop: "100px",
+			width: "573px",
+			height: "99px",
+			fontFamily: "Roboto",
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: "24px",
+			lineHeight: "28px",
+			color: "#000000"
+		},
+		body2: {
+			height: "140px",
+			fontFamily: "Roboto",
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: "24px",
+			lineHeight: "28px",
+			color: "#000000"
 		},
 		subtitle1: {
 			width: "420px",
@@ -67,47 +85,17 @@ export const theme = createMuiTheme({
 			textAlign: "center",
 			flexGrow: "1"
 		},
-		body2: {
-			height: "140px",
-			fontFamily: "Roboto",
-			fontStyle: "normal",
-			fontWeight: "normal",
-			fontSize: "24px",
-			lineHeight: "28px",
-			color: "#000000"
-		},
-		h6: {
-			height: "50px",
-			fontFamily: "Roboto",
-			fontStyle: "normal",
-			fontWeight: "bold",
-			fontSize: "24px",
-			lineHeight: "28px",
-			color: "#000000"
-		},
 		subtitle2: {
-			width: "121px",
-			height: "47px",
-			padding: "206px 0px 0 148px",
+			paddingLeft: "148px",
 			fontFamily: "Roboto",
 			fontStyle: "normal",
 			fontWeight: "normal",
-			fontSize: "40px",
-			lineHeight: "47px",
-			color: "#000000"
-		},
-		caption: {
-			width: "274px",
-			height: "24px",
-			paddingLeft: "60px",
-			marginTop: "541px",
-			fontFamily: "Montserrat",
-			fontStyle: "normal",
-			fontWeight: "normal",
-			fontSize: "15px",
-			lineHeight: "24px",
-			letterSpacing: "-0.015em",
-			color: "black"
+			fontSize: "30px",
+			lineHeight: "8",
+			color: "#000000",
+			height: "57px",
+			display: "flex",
+			alignItems: "center",
 		}
 	}
 });

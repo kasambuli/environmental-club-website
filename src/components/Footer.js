@@ -6,6 +6,7 @@ import {
 	CONTACT_ITEMS as contactItems,
 	FOOTER_IMAGES as footerImages
 } from "../data/constants";
+import { AiFillFacebook, AiFillInstagram, AiFillTwitterCircle, AiFillMail } from "react-icons/ai";
 
 const useStyles = makeStyles({
 	footer: {
@@ -13,13 +14,6 @@ const useStyles = makeStyles({
 		left: "0px",
 		top: "2431px",
 		background: "#C4C4C4"
-	},
-	connect: {
-		background: "#E5E5E5",
-		border: "1px solid rgba(0, 0, 0, 0.3)",
-		borderRadius: "100px",
-		width: "60px",
-		height: "60px"
 	}
 });
 const Footer = () => {
@@ -46,11 +40,19 @@ const Footer = () => {
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Connect</Typography>
 					<Grid container spacing={1}>
-						{footerImages.map((image) => (
-							<Grid item md={3} xl={3} xs={12} sm={6} className={classes.connect}>
-								<Image src={image.src} />
-							</Grid>
-						))}
+						<Grid item md={3} xl={3} xs={12} sm={6}>
+							<AiFillMail />
+						</Grid>
+						<Grid item md={3} xl={3} xs={12} sm={6}>
+							<AiFillTwitterCircle />
+						</Grid>
+						<Grid item md={3} xl={3} xs={12} sm={6}>
+							<AiFillInstagram />
+						</Grid>
+						<Grid item md={3} xl={3} xs={12} sm={6}>
+							<AiFillFacebook />
+						</Grid>
+
 					</Grid>
 				</Grid>
 			</Grid>
