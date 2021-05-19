@@ -85,16 +85,6 @@ export const AUTHENTICATION_BUTTONS = [
 		text: "Register"
 	}
 ];
-export const REGISTRATION_INPUTS = [
-	{ placeholder: "Username", type: "text" },
-	{ placeholder: "Email Address", type: "text" },
-	{ placeholder: "Create Password", type: "text" },
-	{ placeholder: "Confirm Password", type: "text" }
-]
-export const SIGNIN_INPUTS = [
-	REGISTRATION_INPUTS[1], REGISTRATION_INPUTS[2]
-]
-
 
 export const LOREM_IPSUM_TEXT = [...Array(5)].fill({ text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum." });
 
