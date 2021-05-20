@@ -38,24 +38,6 @@ export const HEADER_IMAGES = [
 	}
 ];
 
-export const PARTNER_IMAGES = [
-	{
-		src: "https://via.placeholder.com/169x88"
-	},
-	{
-		src: "https://via.placeholder.com/169x88"
-	},
-	{
-		src: "https://via.placeholder.com/169x88"
-	},
-	{
-		src: "https://via.placeholder.com/169x88"
-	},
-	{
-		src: "https://via.placeholder.com/169x88"
-	}
-];
-
 export const FOOTER_LIST_ITEMS = [
 	{
 		link: "Link 1"
@@ -103,34 +85,9 @@ export const AUTHENTICATION_BUTTONS = [
 		text: "Register"
 	}
 ];
-export const LOREM_IPSUM_TEXT = [
-	{
-		text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum."
-	},
-	{
-		text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum."
-	},
-	{
-		text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum."
-	},
-	{
-		text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum."
-	},
-	{
-		text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum."
-	}
-];
-export const ACTIVITIES = [
-	{
-		text: "Activity Here"
-	},
-	{
-		text: "Activity Here"
-	},
-	{
-		text: "Activity Here"
-	},
-	{
-		text: "Activity Here"
-	},
-];
+
+export const LOREM_IPSUM_TEXT = [...Array(5)].fill({ text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum." });
+
+export const ACTIVITIES = [...Array(12)].fill({ text: "Activity here" });
+
+export const PARTNER_IMAGES = [...Array(5)].fill({ src: "https://via.placeholder.com/169x88" });

@@ -17,10 +17,7 @@ const Slider = () => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <BsFillCircleFill /><div className={classes.circles}></div>
-            <BsFillCircleFill /><div className={classes.circles}></div>
-            <BsFillCircleFill /><div className={classes.circles}></div>
-            <BsFillCircleFill /><div className={classes.circles}></div>
+            {[...Array(4)].map(() => (<><BsFillCircleFill /> <div className={classes.circles}></div></>))}
             <BsFillCircleFill />
         </div>
     )
