@@ -7,8 +7,8 @@ import Registration from "./views/Authentication/Registration";
 function App() {
 	return (
 		<div className="container">
-			{/* <HomePage /> */}
-			<SignIn />
+			<HomePage />
+			{/* <SignIn /> */}
 			{/* <Registration /> */}
 			{/* <Programmes /> */}
 		</div>

@@ -20,7 +20,7 @@ const Section = ({ title, content, text, src }) => {
 			<Grid container spacing={1}>
 				<Grid item md={6} xl={6} xs={12} sm={6}>
 					<div className={classes.image}>
-						<Image src={src} />
+						<Image src={src} height="242px" width="436px" />
 					</div>
 				</Grid>
 				<Grid item md={6} xl={6} xs={12} sm={6}>
