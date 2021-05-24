@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 		height: "242px",
 		left: "0px",
 		top: "109px",
-		background: "#EAEAEA",
+		background: "#81C018",
 		display: "flex",
 		alignItems: "center",
 	},
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 	join: {
 		height: "243px",
 		left: "0px",
-		background: "#E5E5E5",
+		background: "#81C018",
 		display: "flex",
 		alignItems: "center"
 	},

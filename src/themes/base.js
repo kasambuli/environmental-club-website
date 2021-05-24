@@ -13,7 +13,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			lineHeight: "25px",
 			textAlign: "center",
-			color: "white"
+			color: "#63DBD2"
 		},
 		h3: {
 			fontFamily: "Roboto",
@@ -30,7 +30,7 @@ export const theme = createMuiTheme({
 			fontWeight: "bold",
 			fontSize: "24px",
 			lineHeight: "28px",
-			color: "#000000",
+			color: "#63DBD2",
 			padding: "40px 0px"
 		},
 		h5: {
@@ -39,7 +39,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			fontSize: "24px",
 			lineHeight: "28px",
-			color: "#000000"
+			color: "#63DBD2"
 		},
 		h6: {
 			height: "50px",
@@ -92,7 +92,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			fontSize: "30px",
 			lineHeight: "8",
-			color: "#000000",
+			color: "#041726",
 			height: "57px",
 			display: "flex",
 			alignItems: "center",

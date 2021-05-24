@@ -17,7 +17,10 @@ const useStyles = makeStyles({
 		marginLeft: "auto"
 	},
 	navbar: {
-		backgroundColor: "inherit"
+		backgroundColor: "inherit",
+		'& .MuiIconButton-label': {
+			color: "#041726"
+		}
 	}
 });
 const Header = () => {

@@ -2,12 +2,11 @@ import { makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
 	button: {
-		backgroundColor: "black",
 		width: "155.93px",
 		height: "46px",
 		left: "1086px",
 		top: "25px",
-		background: "#333333",
+		background: "#041726",
 		borderRadius: "90px",
 		border: "0px"
 	}

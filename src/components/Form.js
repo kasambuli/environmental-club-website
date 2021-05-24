@@ -15,9 +15,8 @@ const useStyles = makeStyles((theme) => ({
         width: "327px",
         height: "40px",
         background: "#FFFFFF",
-        border: "1px solid rgba(0, 0, 0, 0.5)",
-        boxSizing: "border- box",
         lineHeight: "28px",
+        color: "#041726"
     },
 }))
 

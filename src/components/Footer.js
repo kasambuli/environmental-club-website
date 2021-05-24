@@ -13,7 +13,8 @@ const useStyles = makeStyles({
 		height: "318px",
 		left: "0px",
 		top: "2431px",
-		background: "#C4C4C4"
+		background: "#041726",
+		color: "#63DBD2"
 	}
 });
 const Footer = () => {

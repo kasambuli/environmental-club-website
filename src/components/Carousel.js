@@ -10,7 +10,7 @@ const useStyles = makeStyles({
 	carousel: {
 		marginTop: "250px",
 		height: "250px",
-		background: "#C4C4C4"
+		background: "#81C018"
 	}
 });
 const Carousel = ({ src, content }) => {
