@@ -72,24 +72,30 @@ export const CONTACT_ITEMS = [
 ];
 export const HEADER_ICON_BUTTONS = [
 	{
-		title: "About"
+		title: "About",
+		url: "/"
 	},
 	{
-		title: "Programmes"
+		title: "Programmes",
+		url: "/programmes"
 	},
 	{
-		title: "Cohorts"
+		title: "Cohorts",
+		url: "#"
 	},
 	{
-		title: "Gallery"
+		title: "Gallery",
+		url: "#"
 	}
 ];
 export const AUTHENTICATION_BUTTONS = [
 	{
-		text: "Sign In"
+		text: "Sign In",
+		url: '/signin'
 	},
 	{
-		text: "Register"
+		text: "Register",
+		url: "/register"
 	}
 ];
 

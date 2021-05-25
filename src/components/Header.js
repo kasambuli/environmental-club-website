@@ -6,6 +6,7 @@ import {
 	HEADER_ICON_BUTTONS as iconbuttons,
 	AUTHENTICATION_BUTTONS as authButtons
 } from "../data/constants";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
 	root: {
@@ -23,8 +24,10 @@ const useStyles = makeStyles({
 		}
 	}
 });
+
 const Header = () => {
 	const classes = useStyles();
+	const history = useHistory();
 	return (
 		<div className={classes.root}>
 			<AppBar position="static" className={classes.navbar}>
@@ -32,11 +35,16 @@ const Header = () => {
 					<Image src="https://via.placeholder.com/40" />
 					<Typography variant="subtitle1">
 						{iconbuttons.map((button) => (
-							<IconButton variant="h1">{button.title}</IconButton>
+							<IconButton variant="h1" onClick={() => {
+								history.push(button.url);
+							}}>{button.title}</IconButton>
 						))}
 					</Typography>
 					{authButtons.map((auth) => (
-						<Button text={auth.text} className={classes.authentication} />
+						<div onClick={() => {
+							history.push(auth.url);
+						}}> <Button text={auth.text} className={classes.authentication}
+							/></div>
 					))}
 				</Toolbar>
 			</AppBar>
