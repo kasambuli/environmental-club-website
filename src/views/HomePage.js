@@ -12,7 +12,7 @@ import {
 } from "../data/constants";
 import image7 from "../assets/image7.jpg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	partners: {
 		marginLeft: "45px",
 		padding: "50px 0 100px 0"
@@ -42,16 +42,16 @@ const HomePage = () => {
 			</div>
 			<div className={classes.headerImages}>
 				<Grid container spacing={1} direction="row" justify="center" alignItems="flex-end">
-					{headerImages.map((data) => (
-						<Grid item md={3} xl={3} xs={12} sm={6}>
+					{headerImages.map((data, i) => (
+						<Grid item md={3} xl={3} xs={12} sm={6} key={i}>
 							<Image src={data.src} text={data.text} width="258px" height="318px" />
 						</Grid>
 					))}
 				</Grid>
 			</div>
 
-			{sectionData.map((section) => (
-				<Section title={section.title} content={section.content} text={section.text} src={section.src} />
+			{sectionData.map((section, i) => (
+				<Section title={section.title} content={section.content} text={section.text} src={section.src} key={i} />
 			))}
 
 			<Carousel
@@ -63,8 +63,8 @@ const HomePage = () => {
 				<Typography variant="h3">Our Partners</Typography>
 
 				<Grid container spacing={1}>
-					{partnerImages.map((data) => (
-						<Grid item md={2} xs={2} className={classes.partners}>
+					{partnerImages.map((data, i) => (
+						<Grid item md={2} xs={2} className={classes.partners} key={i}>
 							<Image src={data.src} width="169px" height="88px" />
 						</Grid>
 					))}

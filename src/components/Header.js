@@ -34,16 +34,16 @@ const Header = () => {
 				<Toolbar>
 					<Image src="https://via.placeholder.com/40" />
 					<Typography variant="subtitle1">
-						{iconbuttons.map((button) => (
+						{iconbuttons.map((button, i) => (
 							<IconButton variant="h1" onClick={() => {
 								history.push(button.url);
-							}}>{button.title}</IconButton>
+							}} key={i}>{button.title}</IconButton>
 						))}
 					</Typography>
-					{authButtons.map((auth) => (
+					{authButtons.map((auth, i) => (
 						<div onClick={() => {
 							history.push(auth.url);
-						}}> <Button text={auth.text} className={classes.authentication}
+						}} key={i}> <Button text={auth.text} className={classes.authentication}
 							/></div>
 					))}
 				</Toolbar>

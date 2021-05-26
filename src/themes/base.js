@@ -7,7 +7,6 @@ export const theme = createMuiTheme({
 		},
 		h2: {
 			fontSize: "21px",
-			fontWeight: "250",
 			fontFamily: "Roboto",
 			fontStyle: "normal",
 			fontWeight: "normal",

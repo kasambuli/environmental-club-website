@@ -2,6 +2,7 @@ import Image from "./Image";
 import { Grid, Typography } from "@material-ui/core";
 import Button from "./Buttons";
 import { makeStyles } from "@material-ui/core/styles";
+import PropTypes from 'prop-types'
 
 const useStyles = makeStyles({
 	section: {
@@ -12,6 +13,7 @@ const useStyles = makeStyles({
 		left: "280px"
 	}
 });
+
 const Section = ({ title, content, text, src }) => {
 	const classes = useStyles();
 
@@ -32,5 +34,12 @@ const Section = ({ title, content, text, src }) => {
 		</div>
 	);
 };
+
+Section.propTypes = {
+	title: PropTypes.object.isRequired,
+	content: PropTypes.object.isRequired,
+	text: PropTypes.object.isRequired,
+	src: PropTypes.object.isRequired,
+}
 
 export default Section;

@@ -1,8 +1,9 @@
 import { Typography, Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "./Buttons";
+import PropTypes from 'prop-types'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     inputsSection: {
         padding: "0px 0px 50px 90px",
     },
@@ -25,8 +26,8 @@ const Form = ({ headingText, inputProps }) => {
     const renderInput = () => {
         return (
             <div className={classes.inputsSection}>
-                {inputProps.map((input) => (
-                    <Input inputType={input.inputType} placeholder={input.placeholder} variant={input.variant} className={classes.signinInputs} />
+                {inputProps.map((input, i) => (
+                    <Input inputType={input.inputType} placeholder={input.placeholder} variant={input.variant} className={classes.signinInputs} key={i} />
                 ))}
             </div>
         )
@@ -41,6 +42,11 @@ const Form = ({ headingText, inputProps }) => {
             </div>
         </form>
     )
+}
+
+Form.propTypes = {
+    headingText: PropTypes.object.isRequired,
+    inputProps: PropTypes.object.isRequired
 }
 
 export default Form

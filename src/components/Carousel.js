@@ -2,6 +2,8 @@ import Image from "./Image";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import PropTypes from 'prop-types'
+
 const useStyles = makeStyles({
 	image: {
 		position: "absolute",
@@ -13,6 +15,7 @@ const useStyles = makeStyles({
 		background: "#81C018"
 	}
 });
+
 const Carousel = ({ src, content }) => {
 	const classes = useStyles();
 	return (
@@ -30,5 +33,10 @@ const Carousel = ({ src, content }) => {
 		</div>
 	);
 };
+
+Carousel.propTypes = {
+	src: PropTypes.object.isRequired,
+	content: PropTypes.object.isRequired,
+}
 
 export default Carousel;

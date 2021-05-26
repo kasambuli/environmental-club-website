@@ -8,7 +8,7 @@ import { LOREM_IPSUM_TEXT as loremIpsumText, ACTIVITIES as activties } from "../
 import { GrStar } from 'react-icons/gr';
 import Slider from '../components/Slider';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	title: {
 		height: "242px",
 		left: "0px",
@@ -78,8 +78,8 @@ const Programmes = () => {
 				</Grid>
 
 				<Grid item md={10} xl={10} xs={12} sm={6}>
-					{loremIpsumText.map((data) => (
-						<Program content={data.text} />
+					{loremIpsumText.map((data,i) => (
+						<Program content={data.text} key={i}/>
 					))}
 				</Grid>
 
@@ -88,8 +88,8 @@ const Programmes = () => {
 			<Typography variant="subtitle2">Program Activities</Typography>
 			<div className={classes.activitiesDiv}>
 				<Grid container spacing={1}>
-					{activties.map((data) => (
-						<Grid item md={4} xs={6}>
+					{activties.map((data,i) => (
+						<Grid item md={4} xs={6} key={i}>
 							<p className={classes.activities}>	<GrStar />{data.text}</p>
 						</Grid>
 					))}
