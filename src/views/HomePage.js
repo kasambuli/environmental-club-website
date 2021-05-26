@@ -10,12 +10,13 @@ import {
 	HEADER_IMAGES as headerImages,
 	PARTNER_IMAGES as partnerImages
 } from "../data/constants";
-import image7 from "../assets/image7.jpg"
+import image7 from "../assets/image7.svg"
+import image3 from "../assets/image3.svg"
 
 const useStyles = makeStyles(() => ({
 	partners: {
 		marginLeft: "45px",
-		padding: "50px 0 100px 0"
+		padding: "50px 0 120px 0"
 	},
 	header: {
 		height: "600px",
@@ -27,7 +28,16 @@ const useStyles = makeStyles(() => ({
 		background: "#E5E5E5"
 	},
 	headerImages: {
-		margin: "-250px 0px 0px 100px",
+		margin: "-124px 0px 0px 100px",
+	},
+	overlay: {
+		backgroundColor: "#282335",
+		height: "200px",
+		width: "255px",
+		opacity: "0.7",
+		borderRadius: "100px",
+		color: "#black",
+		textAlign:"center"
 	}
 }));
 const HomePage = () => {
@@ -43,8 +53,10 @@ const HomePage = () => {
 			<div className={classes.headerImages}>
 				<Grid container spacing={1} direction="row" justify="center" alignItems="flex-end">
 					{headerImages.map((data, i) => (
-						<Grid item md={3} xl={3} xs={12} sm={6} key={i}>
-							<Image src={data.src} text={data.text} width="258px" height="318px" />
+						<Grid item md={3} xl={3} xs={12} sm={6} key={i} >
+							<div className={classes.overlay}>
+								<Image src={data.src} text={data.text} width="258px" height="200px" />
+							</div>
 						</Grid>
 					))}
 				</Grid>
@@ -55,10 +67,10 @@ const HomePage = () => {
 			))}
 
 			<Carousel
-				src="https://via.placeholder.com/436x242"
-				content="This is a testimonial"
-			/>
-
+				src={image3}
+				content="Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac."
+				/>
+	
 			<div className={classes.partners}>
 				<Typography variant="h3">Our Partners</Typography>
 

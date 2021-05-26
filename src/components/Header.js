@@ -7,6 +7,7 @@ import {
 	AUTHENTICATION_BUTTONS as authButtons
 } from "../data/constants";
 import { useHistory } from "react-router-dom";
+import logo from "../assets/logo.svg"
 
 const useStyles = makeStyles({
 	root: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles({
 	navbar: {
 		backgroundColor: "inherit",
 		'& .MuiIconButton-label': {
-			color: "#041726"
+			color: "#282335"
 		}
 	}
 });
@@ -32,7 +33,7 @@ const Header = () => {
 		<div className={classes.root}>
 			<AppBar position="static" className={classes.navbar}>
 				<Toolbar>
-					<Image src="https://via.placeholder.com/40" />
+					<Image src={logo} width-="40px" height="40px" />
 					<Typography variant="subtitle1">
 						{iconbuttons.map((button, i) => (
 							<IconButton variant="h1" onClick={() => {

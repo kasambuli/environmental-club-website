@@ -7,7 +7,7 @@ const useStyles = makeStyles({
 		height: "46px",
 		left: "1086px",
 		top: "25px",
-		background: "#041726",
+		background: "#282335",
 		borderRadius: "90px",
 		border: "0px"
 	}

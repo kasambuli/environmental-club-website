@@ -1,46 +1,48 @@
-import image11 from "../assets/image11.jpg"
 import image13 from "../assets/image13.jpg"
 import image18 from "../assets/image18.jpg"
 import image15 from "../assets/image15.jpg"
 import image16 from "../assets/image16.jpg"
 import image17 from "../assets/image17.jpg"
-import cartoon2 from "../assets/cartoon2.jpg"
+import image14 from "../assets/image14.svg"
+import cartoon3 from "../assets/cartoon3.svg"
+import cartoon4 from "../assets/cartoon4.svg"
+import cartoon from "../assets/cartoon.svg"
 export const SECTION_DATA = [
 	{
 		title: "About",
-		content: "This is an about section",
+		content: "Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac.",
 		text: "View More",
-		src: cartoon2
+		src: cartoon4
 	},
 	{
 		title: "Programmes",
-		content: "This is a programmes section",
+		content: "Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac.",
 		text: "View More",
-		src: cartoon2
+		src: cartoon3
 	},
 	{
 		title: "Registration",
-		content: "This is a registration section",
+		content: "Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac.",
 		text: "Register",
-		src: cartoon2
+		src: cartoon
 	}
 ];
 
 export const HEADER_IMAGES = [
 	{
-		src: image11,
+		src: image14,
 		text: "ZANZIBAR SPICE TOUR"
 	},
 	{
-		src: image11,
+		src: image14,
 		text: "SLAVE TRADE TOUR"
 	},
 	{
-		src: image11,
+		src: image14,
 		text: "MWALIMU NYERERE TOUR"
 	},
 	{
-		src: image11,
+		src: image14,
 		text: "KIGALI REMEMBERANCE TOUR"
 	}
 ];

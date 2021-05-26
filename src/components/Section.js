@@ -11,6 +11,9 @@ const useStyles = makeStyles({
 	image: {
 		position: "absolute",
 		left: "280px"
+	},
+	loremIpsum:{
+		width:"500px"
 	}
 });
 
@@ -27,7 +30,7 @@ const Section = ({ title, content, text, src }) => {
 				</Grid>
 				<Grid item md={6} xl={6} xs={12} sm={6}>
 					<Typography variant="h6">{title}</Typography>
-					<Typography variant="body2">{content}</Typography>
+					<Typography variant="body2" className={classes.loremIpsum}>{content}</Typography>
 					<Button text={text} />
 				</Grid>
 			</Grid>

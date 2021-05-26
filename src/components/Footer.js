@@ -6,6 +6,7 @@ import {
 	CONTACT_ITEMS as contactItems,
 } from "../data/constants";
 import { AiFillFacebook, AiFillInstagram, AiFillTwitterCircle, AiFillMail } from "react-icons/ai";
+import logo from "../assets/logo.svg"
 
 const useStyles = makeStyles({
 	footer: {
@@ -14,6 +15,11 @@ const useStyles = makeStyles({
 		top: "2431px",
 		background: "#041726",
 		color: "#63DBD2"
+	},
+	logo: {
+		marginTop: "50px",
+		display: "flex",
+		justifyContent: "center"
 	}
 });
 const Footer = () => {
@@ -21,9 +27,8 @@ const Footer = () => {
 	return (
 		<div className={classes.footer}>
 			<Grid container spacing={1}>
-				<Grid item md={3} xl={3} xs={12} sm={6}>
-					<Image src="https://via.placeholder.com/40" alt="logo" />
-					LOGO
+				<Grid item md={3} xl={3} xs={12} sm={6} className={classes.logo}>
+					<Image src={logo} height="40px" width="40px" alt="logo" />
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Quick Links</Typography>
@@ -33,7 +38,7 @@ const Footer = () => {
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Contact Us</Typography>
-					{contactItems.map((contact,i) => (
+					{contactItems.map((contact, i) => (
 						<Typography variant="h5" key={i}>{contact.contact} </Typography>
 					))}
 				</Grid>

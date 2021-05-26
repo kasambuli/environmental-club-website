@@ -18,8 +18,8 @@ export const theme = createMuiTheme({
 			fontFamily: "Roboto",
 			fontStyle: "normal",
 			fontWeight: "bold",
-			fontSize: "24px",
-			color: "#000000",
+			fontSize: "28px",
+			color: "#DB456B",
 			textAlign: "center",
 			padding: "0 50px 50px 0"
 		},
@@ -36,7 +36,7 @@ export const theme = createMuiTheme({
 			fontFamily: "Roboto",
 			fontStyle: "normal",
 			fontWeight: "normal",
-			fontSize: "24px",
+			fontSize: "20px",
 			lineHeight: "28px",
 			color: "#63DBD2"
 		},
@@ -45,9 +45,9 @@ export const theme = createMuiTheme({
 			fontFamily: "Roboto",
 			fontStyle: "normal",
 			fontWeight: "bold",
-			fontSize: "24px",
+			fontSize: "28px",
 			lineHeight: "28px",
-			color: "#000000"
+			color: "#DB456B"
 		},
 		body1: {
 			marginLeft: "50px",
