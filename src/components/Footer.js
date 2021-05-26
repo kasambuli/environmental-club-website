@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 		height: "318px",
 		left: "0px",
 		top: "2431px",
-		background: "#041726",
+		background: "#282335",
 		color: "#63DBD2"
 	},
 	logo: {

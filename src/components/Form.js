@@ -5,20 +5,24 @@ import PropTypes from 'prop-types'
 
 const useStyles = makeStyles(() => ({
     inputsSection: {
-        padding: "0px 0px 50px 90px",
+        padding: "0px 0px 50px 100px",
     },
     buttonSection: {
-        padding: "0px 0px 0px 140px",
+        padding: "0px 0px 0px 150px",
     },
     signinInputs: {
-        paddingTop: "0px",
-        marginRight: "150px",
-        width: "327px",
-        height: "40px",
-        background: "#FFFFFF",
-        lineHeight: "28px",
-        color: "#041726"
+        '&.MuiInputBase-root': {
+            marginTop: "0px",
+            fontSize: "20px",
+            width: "300px",
+            background: "#FFFFFF",
+            color: "#041726",
+        }
     },
+    form: {
+        height: "580px",
+        padding: "0px 0px 50px 100px",
+    }
 }))
 
 const Form = ({ headingText, inputProps }) => {
@@ -33,7 +37,7 @@ const Form = ({ headingText, inputProps }) => {
         )
     }
     return (
-        <form>
+        <form className={classes.form}>
             <Typography variant="subtitle2">{headingText}</Typography>
             {renderInput()}
             <div className={classes.buttonSection} >

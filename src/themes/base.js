@@ -91,7 +91,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			fontSize: "30px",
 			lineHeight: "8",
-			color: "#041726",
+			color: "#DB456B",
 			height: "57px",
 			display: "flex",
 			alignItems: "center",

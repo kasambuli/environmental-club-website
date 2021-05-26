@@ -3,7 +3,7 @@ import Form from "../../components/Form"
 import Image from "../../components/Image";
 import Footer from "../../components/Footer";
 import { Grid } from '@material-ui/core';
-import image2 from "../../assets/image2.jpg"
+import image2 from "../../assets/image2.svg"
 
 const registrationInputs = [
 	{ placeholder: "Username", type: "text", variant: "outlined" },
