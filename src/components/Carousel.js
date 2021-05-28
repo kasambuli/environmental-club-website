@@ -34,8 +34,8 @@ const Carousel = ({ src, content }) => {
 };
 
 Carousel.propTypes = {
-	src: PropTypes.object.isRequired,
-	content: PropTypes.object.isRequired,
+	src: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
 }
 
 export default Carousel;

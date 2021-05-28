@@ -35,16 +35,16 @@ const Header = () => {
 				<Toolbar>
 					<Image src={logo} width-="40px" height="40px" />
 					<Typography variant="subtitle1">
-						{iconbuttons.map((button, i) => (
+						{iconbuttons.map(({ url, title }, i) => (
 							<IconButton variant="h1" onClick={() => {
-								history.push(button.url);
-							}} key={i}>{button.title}</IconButton>
+								history.push(url);
+							}} key={i}>{title}</IconButton>
 						))}
 					</Typography>
-					{authButtons.map((auth, i) => (
+					{authButtons.map(({ url, text }, i) => (
 						<div onClick={() => {
-							history.push(auth.url);
-						}} key={i}> <Button text={auth.text} className={classes.authentication}
+							history.push(url);
+						}} key={i}> <Button text={text} className={classes.authentication}
 							/></div>
 					))}
 				</Toolbar>

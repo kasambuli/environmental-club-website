@@ -37,7 +37,7 @@ const useStyles = makeStyles(() => ({
 		opacity: "0.7",
 		borderRadius: "100px",
 		color: "#black",
-		textAlign:"center"
+		textAlign: "center"
 	}
 }));
 const HomePage = () => {
@@ -52,32 +52,32 @@ const HomePage = () => {
 			</div>
 			<div className={classes.headerImages}>
 				<Grid container spacing={1} direction="row" justify="center" alignItems="flex-end">
-					{headerImages.map((data, i) => (
+					{headerImages.map(({ text, src }, i) => (
 						<Grid item md={3} xl={3} xs={12} sm={6} key={i} >
 							<div className={classes.overlay}>
-								<Image src={data.src} text={data.text} width="258px" height="200px" />
+								<Image src={src} text={text} width="258px" height="200px" />
 							</div>
 						</Grid>
 					))}
 				</Grid>
 			</div>
 
-			{sectionData.map((section, i) => (
-				<Section title={section.title} content={section.content} text={section.text} src={section.src} key={i} />
+			{sectionData.map(({ title, content, text, src }, i) => (
+				<Section title={title} content={content} text={text} src={src} key={i} />
 			))}
 
 			<Carousel
 				src={image3}
 				content="Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac."
-				/>
-	
+			/>
+
 			<div className={classes.partners}>
 				<Typography variant="h3">Our Partners</Typography>
 
 				<Grid container spacing={1}>
-					{partnerImages.map((data, i) => (
+					{partnerImages.map(({ src }, i) => (
 						<Grid item md={2} xs={2} className={classes.partners} key={i}>
-							<Image src={data.src} width="169px" height="88px" />
+							<Image src={src} width="169px" height="88px" />
 						</Grid>
 					))}
 				</Grid>

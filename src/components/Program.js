@@ -27,7 +27,7 @@ const Program = ({ content }) => {
 };
 
 Program.propTypes = {
-	content: PropTypes.object.isRequired
+	content: PropTypes.string.isRequired
 }
 
 export default Program;

@@ -12,8 +12,8 @@ const useStyles = makeStyles({
 		position: "absolute",
 		left: "280px"
 	},
-	loremIpsum:{
-		width:"500px"
+	loremIpsum: {
+		width: "500px"
 	}
 });
 
@@ -39,10 +39,10 @@ const Section = ({ title, content, text, src }) => {
 };
 
 Section.propTypes = {
-	title: PropTypes.object.isRequired,
-	content: PropTypes.object.isRequired,
-	text: PropTypes.object.isRequired,
-	src: PropTypes.object.isRequired,
+	title: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
+	src: PropTypes.string.isRequired,
 }
 
 export default Section;

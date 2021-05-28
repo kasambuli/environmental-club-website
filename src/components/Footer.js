@@ -32,14 +32,14 @@ const Footer = () => {
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Quick Links</Typography>
-					{listItems.map((item, i) => (
-						<Typography variant="h5" key={i}>{item.link}</Typography>
+					{listItems.map(({ link }, i) => (
+						<Typography variant="h5" key={i}>{link}</Typography>
 					))}
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Contact Us</Typography>
-					{contactItems.map((contact, i) => (
-						<Typography variant="h5" key={i}>{contact.contact} </Typography>
+					{contactItems.map(({ contact }, i) => (
+						<Typography variant="h5" key={i}>{contact} </Typography>
 					))}
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>

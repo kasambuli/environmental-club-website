@@ -30,8 +30,8 @@ const Form = ({ headingText, inputProps }) => {
     const renderInput = () => {
         return (
             <div className={classes.inputsSection}>
-                {inputProps.map((input, i) => (
-                    <Input inputType={input.inputType} placeholder={input.placeholder} variant={input.variant} className={classes.signinInputs} key={i} />
+                {inputProps.map(({ inputType, placeholder, variant }, i) => (
+                    <Input inputType={inputType} placeholder={placeholder} variant={variant} className={classes.signinInputs} key={i} />
                 ))}
             </div>
         )
@@ -49,7 +49,7 @@ const Form = ({ headingText, inputProps }) => {
 }
 
 Form.propTypes = {
-    headingText: PropTypes.object.isRequired,
+    headingText: PropTypes.string.isRequired,
     inputProps: PropTypes.object.isRequired
 }
 
