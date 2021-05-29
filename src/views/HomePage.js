@@ -8,10 +8,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
 	SECTION_DATA as sectionData,
 	HEADER_IMAGES as headerImages,
-	PARTNER_IMAGES as partnerImages
+	PARTNER_IMAGES as partnerImages,
+	CAROUSEL_IMAGES as carouselImages
 } from "../data/constants";
 import image7 from "../assets/image7.svg"
-import image3 from "../assets/image3.svg"
+import { Carousel as ReactCarousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const useStyles = makeStyles(() => ({
 	partners: {
@@ -65,11 +67,12 @@ const HomePage = () => {
 			{sectionData.map(({ title, content, text, src }, i) => (
 				<Section title={title} content={content} text={text} src={src} key={i} />
 			))}
+			<ReactCarousel autoPlay showArrows={true}>
+				{carouselImages.map(({ src, content }, i) => (
+					<Carousel src={src} content={content} key={i} />
+				))}
+			</ReactCarousel>
 
-			<Carousel
-				src={image3}
-				content="Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac."
-			/>
 
 			<div className={classes.partners}>
 				<Typography variant="h3">Our Partners</Typography>

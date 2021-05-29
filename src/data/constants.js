@@ -7,6 +7,9 @@ import image14 from "../assets/image14.svg"
 import cartoon3 from "../assets/cartoon3.svg"
 import cartoon4 from "../assets/cartoon4.svg"
 import cartoon from "../assets/cartoon.svg"
+import image3 from "../assets/image3.svg"
+import image10 from "../assets/image10.svg"
+
 export const SECTION_DATA = [
 	{
 		title: "About",
@@ -108,6 +111,15 @@ export const PARTNER_IMAGES = [
 	{ src: image16 },
 	{ src: image17 },
 ]
+export const CAROUSEL_IMAGES = [
+	{
+		src: image3,
+		content: "Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac."
+	},
+	{
+		src: image10,
+		content: "Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac."
+	}]
 export const LOREM_IPSUM_TEXT = [...Array(5)].fill({ text: "Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. Aliquam, vulputate quam habitant convallis morbi nec aenean pharetra neque. Non sit elementum nulla facilisis commodo quisque proin mauris. Lobortis risus id elementum." });
 
 export const ACTIVITIES = [...Array(12)].fill({ text: "Activity here" });
