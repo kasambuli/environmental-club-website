@@ -33,7 +33,7 @@ const Header = () => {
 		<div className={classes.root}>
 			<AppBar position="static" className={classes.navbar}>
 				<Toolbar>
-					<Image src={logo} width-="40px" height="40px" />
+					<Image src={logo} width="40px" height="40px" />
 					<Typography variant="subtitle1">
 						{iconbuttons.map(({ url, title }, i) => (
 							<IconButton variant="h1" onClick={() => {

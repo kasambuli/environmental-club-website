@@ -21,13 +21,16 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "lint": "eslint .",
+        "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
     },
     "eslintConfig": {
         "extends": [
             "react-app",
             "react-app/jest",
-            "plugin:prettier/recommended"
+            "plugin:prettier/recommended",
+            "eslint:recommended"
         ]
     },
     "browserslist": {
@@ -46,16 +49,11 @@
         "eslint": "^7.27.0",
         "eslint-plugin-react": "^7.23.2",
         "husky": "^6.0.0",
-        "lint-staged": "^11.0.0",
         "prettier": "^2.3.0"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "eslint --fix"
+            "pre-commit": "npm run lint && npm run format"
         }
-    },
-    "lint-staged": {
-        "*.+(js|jsx)": "eslint --fix",
-        "*.+(json|css|md)": "prettier --write"
     }
 }
