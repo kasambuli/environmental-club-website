@@ -10,20 +10,24 @@ import {
 	HEADER_IMAGES as headerImages,
 	PARTNER_IMAGES as partnerImages
 } from "../data/constants";
+import image7 from "../assets/image7.jpg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	partners: {
 		marginLeft: "45px",
 		padding: "50px 0 100px 0"
 	},
 	header: {
-		paddingTop: "300px",
+		height: "600px",
 		background: "#E5E5E5",
 		border: "0px solid rgba(0, 0, 0, 0.3)",
-		boxSizing: "border-box"
+		boxSizing: "border-box",
 	},
 	navbar: {
 		background: "#E5E5E5"
+	},
+	headerImages: {
+		margin: "-250px 0px 0px 100px",
 	}
 }));
 const HomePage = () => {
@@ -34,17 +38,20 @@ const HomePage = () => {
 				<Header />
 			</div>
 			<div className={classes.header}>
+				<Image src={image7} height="600px" width="1520px" />
+			</div>
+			<div className={classes.headerImages}>
 				<Grid container spacing={1} direction="row" justify="center" alignItems="flex-end">
-					{headerImages.map((data) => (
-						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<Image src={data.src} text={data.text} />
+					{headerImages.map((data, i) => (
+						<Grid item md={3} xl={3} xs={12} sm={6} key={i}>
+							<Image src={data.src} text={data.text} width="258px" height="318px" />
 						</Grid>
 					))}
 				</Grid>
 			</div>
 
-			{sectionData.map((section) => (
-				<Section title={section.title} content={section.content} text={section.text} src={section.src} />
+			{sectionData.map((section, i) => (
+				<Section title={section.title} content={section.content} text={section.text} src={section.src} key={i} />
 			))}
 
 			<Carousel
@@ -53,12 +60,12 @@ const HomePage = () => {
 			/>
 
 			<div className={classes.partners}>
-				<Typography variant="h3">Our partners</Typography>
+				<Typography variant="h3">Our Partners</Typography>
 
 				<Grid container spacing={1}>
-					{partnerImages.map((data) => (
-						<Grid item md={2} xs={2} className={classes.partners}>
-							<Image src={data.src} />
+					{partnerImages.map((data, i) => (
+						<Grid item md={2} xs={2} className={classes.partners} key={i}>
+							<Image src={data.src} width="169px" height="88px" />
 						</Grid>
 					))}
 				</Grid>

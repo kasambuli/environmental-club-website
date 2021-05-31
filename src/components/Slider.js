@@ -1,7 +1,7 @@
 import { BsFillCircleFill } from 'react-icons/bs';
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     circles: {
         borderLeft: "1px solid black",
         height: "170px",

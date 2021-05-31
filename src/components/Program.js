@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
+import PropTypes from 'prop-types'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	root: {
 		width: "842px",
 		height: "120px",
@@ -24,5 +25,9 @@ const Program = ({ content }) => {
 		</div>
 	);
 };
+
+Program.propTypes = {
+	content: PropTypes.object.isRequired
+}
 
 export default Program;

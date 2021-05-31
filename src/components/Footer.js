@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
 	FOOTER_LIST_ITEMS as listItems,
 	CONTACT_ITEMS as contactItems,
-	FOOTER_IMAGES as footerImages
 } from "../data/constants";
 import { AiFillFacebook, AiFillInstagram, AiFillTwitterCircle, AiFillMail } from "react-icons/ai";
 
@@ -13,7 +12,8 @@ const useStyles = makeStyles({
 		height: "318px",
 		left: "0px",
 		top: "2431px",
-		background: "#C4C4C4"
+		background: "#041726",
+		color: "#63DBD2"
 	}
 });
 const Footer = () => {
@@ -27,14 +27,14 @@ const Footer = () => {
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Quick Links</Typography>
-					{listItems.map((item) => (
-						<Typography variant="h5">{item.link}</Typography>
+					{listItems.map((item, i) => (
+						<Typography variant="h5" key={i}>{item.link}</Typography>
 					))}
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Contact Us</Typography>
-					{contactItems.map((contact) => (
-						<Typography variant="h5">{contact.contact} </Typography>
+					{contactItems.map((contact,i) => (
+						<Typography variant="h5" key={i}>{contact.contact} </Typography>
 					))}
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>

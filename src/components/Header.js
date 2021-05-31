@@ -6,6 +6,7 @@ import {
 	HEADER_ICON_BUTTONS as iconbuttons,
 	AUTHENTICATION_BUTTONS as authButtons
 } from "../data/constants";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
 	root: {
@@ -17,23 +18,33 @@ const useStyles = makeStyles({
 		marginLeft: "auto"
 	},
 	navbar: {
-		backgroundColor: "inherit"
+		backgroundColor: "inherit",
+		'& .MuiIconButton-label': {
+			color: "#041726"
+		}
 	}
 });
+
 const Header = () => {
 	const classes = useStyles();
+	const history = useHistory();
 	return (
 		<div className={classes.root}>
 			<AppBar position="static" className={classes.navbar}>
 				<Toolbar>
 					<Image src="https://via.placeholder.com/40" />
 					<Typography variant="subtitle1">
-						{iconbuttons.map((button) => (
-							<IconButton variant="h1">{button.title}</IconButton>
+						{iconbuttons.map((button, i) => (
+							<IconButton variant="h1" onClick={() => {
+								history.push(button.url);
+							}} key={i}>{button.title}</IconButton>
 						))}
 					</Typography>
-					{authButtons.map((auth) => (
-						<Button text={auth.text} className={classes.authentication} />
+					{authButtons.map((auth, i) => (
+						<div onClick={() => {
+							history.push(auth.url);
+						}} key={i}> <Button text={auth.text} className={classes.authentication}
+							/></div>
 					))}
 				</Toolbar>
 			</AppBar>

@@ -2,8 +2,8 @@ import Header from "../../components/Header";
 import Form from "../../components/Form"
 import Image from "../../components/Image";
 import Footer from "../../components/Footer";
-import { Grid, Typography, Input } from '@material-ui/core';
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from '@material-ui/core';
+import image2 from "../../assets/image2.jpg"
 
 const registrationInputs = [
 	{ placeholder: "Username", type: "text", variant: "outlined" },
@@ -21,7 +21,7 @@ const Registration = () => {
 					<Form headingText="Register" inputProps={registrationInputs} />
 				</Grid>
 				<Grid item md={6} xl={6} xs={12} sm={6}>
-					<Image src="https://via.placeholder.com/698x743" />
+					<Image src={image2} width="750px" height="743px" />
 				</Grid>
 			</Grid>
 			<Footer />
