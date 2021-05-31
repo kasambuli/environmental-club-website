@@ -2,19 +2,19 @@ import Image from "./Image";
 import { Grid, Typography } from "@material-ui/core";
 import Button from "./Buttons";
 import { makeStyles } from "@material-ui/core/styles";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles({
 	section: {
-		marginTop: "180px"
+		marginTop: "180px",
 	},
 	image: {
 		position: "absolute",
-		left: "280px"
+		left: "280px",
 	},
 	loremIpsum: {
-		width: "500px"
-	}
+		width: "500px",
+	},
 });
 
 const Section = ({ title, content, text, src }) => {
@@ -30,7 +30,9 @@ const Section = ({ title, content, text, src }) => {
 				</Grid>
 				<Grid item md={6} xl={6} xs={12} sm={6}>
 					<Typography variant="h6">{title}</Typography>
-					<Typography variant="body2" className={classes.loremIpsum}>{content}</Typography>
+					<Typography variant="body2" className={classes.loremIpsum}>
+						{content}
+					</Typography>
 					<Button text={text} />
 				</Grid>
 			</Grid>
@@ -43,6 +45,6 @@ Section.propTypes = {
 	content: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
 	src: PropTypes.string.isRequired,
-}
+};
 
 export default Section;

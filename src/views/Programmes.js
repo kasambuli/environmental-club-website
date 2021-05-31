@@ -4,9 +4,12 @@ import Footer from "../components/Footer";
 import Program from "../components/Program";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
-import { LOREM_IPSUM_TEXT as loremIpsumText, ACTIVITIES as activties } from "../data/constants"
-import { GrStar } from 'react-icons/gr';
-import Slider from '../components/Slider';
+import {
+	LOREM_IPSUM_TEXT as loremIpsumText,
+	ACTIVITIES as activties,
+} from "../data/constants";
+import { GrStar } from "react-icons/gr";
+import Slider from "../components/Slider";
 
 const useStyles = makeStyles(() => ({
 	title: {
@@ -40,24 +43,22 @@ const useStyles = makeStyles(() => ({
 		fontWeight: "normal",
 		fontSize: "24px",
 		lineHeight: "28px",
-		color: "#000000"
+		color: "#000000",
 	},
 	join: {
 		height: "243px",
 		left: "0px",
 		background: "#63DBD2",
 		display: "flex",
-		alignItems: "center"
+		alignItems: "center",
 	},
 	button: {
-		paddingLeft: "200px"
+		paddingLeft: "200px",
 	},
 	activitiesDiv: {
-		marginBottom: "100px"
-	}
-}
-
-))
+		marginBottom: "100px",
+	},
+}));
 const Programmes = () => {
 	const classes = useStyles();
 	return (
@@ -82,7 +83,6 @@ const Programmes = () => {
 						<Program content={text} key={i} />
 					))}
 				</Grid>
-
 			</Grid>
 
 			<Typography variant="subtitle2">Program Activities</Typography>
@@ -90,7 +90,11 @@ const Programmes = () => {
 				<Grid container spacing={1}>
 					{activties.map(({ text }, i) => (
 						<Grid item md={4} xs={6} key={i}>
-							<p className={classes.activities}>	<GrStar />{text}</p>
+							<p className={classes.activities}>
+								{" "}
+								<GrStar />
+								{text}
+							</p>
 						</Grid>
 					))}
 				</Grid>
@@ -102,9 +106,12 @@ const Programmes = () => {
 						<Typography variant="subtitle2">Why join?</Typography>
 					</Grid>
 					<Grid item md={4} xs={6}>
-						<Typography variant="body2">Pretium lectus non purus nunc interdum. Nunc malesuada at egestas in sed. Lectus nulla tempor donec tempus metus semper tempor. </Typography>
+						<Typography variant="body2">
+							Pretium lectus non purus nunc interdum. Nunc malesuada at egestas
+							in sed. Lectus nulla tempor donec tempus metus semper tempor.{" "}
+						</Typography>
 					</Grid>
-					<Grid item md={4} xs={6} >
+					<Grid item md={4} xs={6}>
 						<div className={classes.button}>
 							<Button text="Register" />
 						</div>
@@ -112,7 +119,7 @@ const Programmes = () => {
 				</Grid>
 			</div>
 			<Footer />
-		</div >
+		</div>
 	);
 };
 

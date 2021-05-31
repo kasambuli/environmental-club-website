@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Image = ({ height, width, text, src }) => {
 	return (
@@ -14,6 +14,6 @@ Image.propTypes = {
 	width: PropTypes.number.isRequired,
 	text: PropTypes.string.isRequired,
 	src: PropTypes.string.isRequired,
-}
+};
 
 export default Image;

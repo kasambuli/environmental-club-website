@@ -5,8 +5,13 @@ import {
 	FOOTER_LIST_ITEMS as listItems,
 	CONTACT_ITEMS as contactItems,
 } from "../data/constants";
-import { AiFillFacebook, AiFillInstagram, AiFillTwitterCircle, AiFillMail } from "react-icons/ai";
-import logo from "../assets/logo.svg"
+import {
+	AiFillFacebook,
+	AiFillInstagram,
+	AiFillTwitterCircle,
+	AiFillMail,
+} from "react-icons/ai";
+import logo from "../assets/logo.svg";
 
 const useStyles = makeStyles({
 	footer: {
@@ -14,13 +19,13 @@ const useStyles = makeStyles({
 		left: "0px",
 		top: "2431px",
 		background: "#282335",
-		color: "#63DBD2"
+		color: "#63DBD2",
 	},
 	logo: {
 		marginTop: "50px",
 		display: "flex",
-		justifyContent: "center"
-	}
+		justifyContent: "center",
+	},
 });
 const Footer = () => {
 	const classes = useStyles();
@@ -33,13 +38,17 @@ const Footer = () => {
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Quick Links</Typography>
 					{listItems.map(({ link }, i) => (
-						<Typography variant="h5" key={i}>{link}</Typography>
+						<Typography variant="h5" key={i}>
+							{link}
+						</Typography>
 					))}
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
 					<Typography variant="h4">Contact Us</Typography>
 					{contactItems.map(({ contact }, i) => (
-						<Typography variant="h5" key={i}>{contact} </Typography>
+						<Typography variant="h5" key={i}>
+							{contact}{" "}
+						</Typography>
 					))}
 				</Grid>
 				<Grid item md={3} xl={3} xs={12} sm={6}>
@@ -57,7 +66,6 @@ const Footer = () => {
 						<Grid item md={3} xl={3} xs={12} sm={6}>
 							<AiFillFacebook />
 						</Grid>
-
 					</Grid>
 				</Grid>
 			</Grid>

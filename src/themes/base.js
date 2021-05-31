@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 export const theme = createMuiTheme({
 	typography: {
 		h1: {
-			flexGrow: 1
+			flexGrow: 1,
 		},
 		h2: {
 			fontSize: "21px",
@@ -12,7 +12,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			lineHeight: "25px",
 			textAlign: "center",
-			color: "#63DBD2"
+			color: "#63DBD2",
 		},
 		h3: {
 			fontFamily: "Roboto",
@@ -21,7 +21,7 @@ export const theme = createMuiTheme({
 			fontSize: "28px",
 			color: "#DB456B",
 			textAlign: "center",
-			padding: "0 50px 50px 0"
+			padding: "0 50px 50px 0",
 		},
 		h4: {
 			fontFamily: "Roboto",
@@ -30,7 +30,7 @@ export const theme = createMuiTheme({
 			fontSize: "24px",
 			lineHeight: "28px",
 			color: "#63DBD2",
-			padding: "40px 0px"
+			padding: "40px 0px",
 		},
 		h5: {
 			fontFamily: "Roboto",
@@ -38,7 +38,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			fontSize: "20px",
 			lineHeight: "28px",
-			color: "#63DBD2"
+			color: "#63DBD2",
 		},
 		h6: {
 			height: "50px",
@@ -47,7 +47,7 @@ export const theme = createMuiTheme({
 			fontWeight: "bold",
 			fontSize: "28px",
 			lineHeight: "28px",
-			color: "#DB456B"
+			color: "#DB456B",
 		},
 		body1: {
 			marginLeft: "50px",
@@ -59,7 +59,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			fontSize: "24px",
 			lineHeight: "28px",
-			color: "#000000"
+			color: "#000000",
 		},
 		body2: {
 			height: "140px",
@@ -68,7 +68,7 @@ export const theme = createMuiTheme({
 			fontWeight: "normal",
 			fontSize: "24px",
 			lineHeight: "28px",
-			color: "#000000"
+			color: "#000000",
 		},
 		subtitle1: {
 			width: "420px",
@@ -82,7 +82,7 @@ export const theme = createMuiTheme({
 			lineHeight: "25px",
 			color: "black",
 			textAlign: "center",
-			flexGrow: "1"
+			flexGrow: "1",
 		},
 		subtitle2: {
 			paddingLeft: "148px",
@@ -95,6 +95,6 @@ export const theme = createMuiTheme({
 			height: "57px",
 			display: "flex",
 			alignItems: "center",
-		}
-	}
+		},
+	},
 });

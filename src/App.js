@@ -10,10 +10,10 @@ function App() {
 		<div className="container">
 			<Router>
 				<Switch>
-					<Route component={SignIn} path={'/signin'} exact />
-					<Route component={Registration} path={'/register'} exact />
-					<Route component={HomePage} path={'/'} exact />
-					<Route component={Programmes} path={'/programmes'} exact />
+					<Route component={SignIn} path={"/signin"} exact />
+					<Route component={Registration} path={"/register"} exact />
+					<Route component={HomePage} path={"/"} exact />
+					<Route component={Programmes} path={"/programmes"} exact />
 				</Switch>
 			</Router>
 		</div>
