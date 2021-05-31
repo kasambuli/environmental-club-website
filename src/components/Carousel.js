@@ -10,9 +10,8 @@ const useStyles = makeStyles({
 		left: "350px"
 	},
 	carousel: {
-		marginTop: "250px",
+		margin: "200px 0px 100px 0px",
 		height: "250px",
-		background: "#81C018"
 	}
 });
 
@@ -23,7 +22,7 @@ const Carousel = ({ src, content }) => {
 			<Grid container spacing={1}>
 				<Grid item md={6} xl={6} xs={12} sm={6}>
 					<div className={classes.image}>
-						<Image src={src} />
+						<Image src={src} height="242px" width="436px" />
 					</div>
 				</Grid>
 				<Grid item md={6} xl={6} xs={12} sm={6}>
@@ -35,8 +34,8 @@ const Carousel = ({ src, content }) => {
 };
 
 Carousel.propTypes = {
-	src: PropTypes.object.isRequired,
-	content: PropTypes.object.isRequired,
+	src: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
 }
 
 export default Carousel;

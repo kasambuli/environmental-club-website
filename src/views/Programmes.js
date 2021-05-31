@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
 		height: "242px",
 		left: "0px",
 		top: "109px",
-		background: "#81C018",
+		background: "#282335",
 		display: "flex",
 		alignItems: "center",
 	},
@@ -45,7 +45,7 @@ const useStyles = makeStyles(() => ({
 	join: {
 		height: "243px",
 		left: "0px",
-		background: "#81C018",
+		background: "#63DBD2",
 		display: "flex",
 		alignItems: "center"
 	},
@@ -78,8 +78,8 @@ const Programmes = () => {
 				</Grid>
 
 				<Grid item md={10} xl={10} xs={12} sm={6}>
-					{loremIpsumText.map((data,i) => (
-						<Program content={data.text} key={i}/>
+					{loremIpsumText.map(({ text }, i) => (
+						<Program content={text} key={i} />
 					))}
 				</Grid>
 
@@ -88,9 +88,9 @@ const Programmes = () => {
 			<Typography variant="subtitle2">Program Activities</Typography>
 			<div className={classes.activitiesDiv}>
 				<Grid container spacing={1}>
-					{activties.map((data,i) => (
+					{activties.map(({ text }, i) => (
 						<Grid item md={4} xs={6} key={i}>
-							<p className={classes.activities}>	<GrStar />{data.text}</p>
+							<p className={classes.activities}>	<GrStar />{text}</p>
 						</Grid>
 					))}
 				</Grid>

@@ -10,10 +10,10 @@ const Image = ({ height, width, text, src }) => {
 };
 
 Image.propTypes = {
-	height: PropTypes.object.isRequired,
-	width: PropTypes.object.isRequired,
-	text: PropTypes.object.isRequired,
-	src: PropTypes.object.isRequired,
+	height: PropTypes.number.isRequired,
+	width: PropTypes.number.isRequired,
+	text: PropTypes.string.isRequired,
+	src: PropTypes.string.isRequired,
 }
 
 export default Image;
