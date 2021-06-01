@@ -12,29 +12,44 @@ const useStyles = makeStyles({
 		position: "absolute",
 		left: "280px",
 	},
+	image2: {
+		right: "280px"
+	},
 	loremIpsum: {
 		width: "500px",
 	},
 });
-
-const Section = ({ title, content, text, src }) => {
+const ImageGrid = ({ src, rtl = true }) => {
 	const classes = useStyles();
+	return (
+		<Grid item md={6} xl={6} xs={6} sm={6}>
+			{rtl ? <div className={classes.image}>
+				<Image src={src} height="242px" width="436px" />
+			</div> :
+				<div className={classes.image2}>
+					<Image src={src} height="242px" width="436px" />
+				</div>}
+		</Grid>)
+}
+const ContentGrid = ({ title, content, text }) => {
+	const classes = useStyles();
+	return (
+		<Grid item md={6} xl={6} xs={6} sm={6}>
+			<Typography variant="h6">{title}</Typography>
+			<Typography variant="body2" className={classes.loremIpsum}>
+				{content}
+			</Typography>
+			<Button text={text} />
+		</Grid>)
+}
 
+const Section = ({ title, content, text, src, rtl = true }) => {
+	const contentGripProps = { title, content, text }
+	const classes = useStyles();
 	return (
 		<div className={classes.section}>
 			<Grid container spacing={1}>
-				<Grid item md={6} xl={6} xs={12} sm={6}>
-					<div className={classes.image}>
-						<Image src={src} height="242px" width="436px" />
-					</div>
-				</Grid>
-				<Grid item md={6} xl={6} xs={12} sm={6}>
-					<Typography variant="h6">{title}</Typography>
-					<Typography variant="body2" className={classes.loremIpsum}>
-						{content}
-					</Typography>
-					<Button text={text} />
-				</Grid>
+				{rtl ? <><ImageGrid src={src} rtl={rtl} /> <ContentGrid {...contentGripProps} /></> : <><ContentGrid {...contentGripProps} /> <ImageGrid src={src} rtl={rtl} /></>}
 			</Grid>
 		</div>
 	);
@@ -45,6 +60,16 @@ Section.propTypes = {
 	content: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
 	src: PropTypes.string.isRequired,
+	rtl: PropTypes.boolean,
+};
+ImageGrid.propTypes = {
+	src: PropTypes.string.isRequired,
+	rtl: PropTypes.boolean,
+};
+ContentGrid.propTypes = {
+	title: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
 };
 
 export default Section;

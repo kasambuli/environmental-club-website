@@ -70,12 +70,13 @@ const HomePage = () => {
 				</Grid>
 			</div>
 
-			{sectionData.map(({ title, content, text, src }, i) => (
+			{sectionData.map(({ title, content, text, src, rtl }, i) => (
 				<Section
 					title={title}
 					content={content}
 					text={text}
 					src={src}
+					rtl={rtl}
 					key={i}
 				/>
 			))}

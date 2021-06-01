@@ -17,6 +17,7 @@ export const SECTION_DATA = [
 			"Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac.",
 		text: "View More",
 		src: cartoon4,
+		rtl: true
 	},
 	{
 		title: "Programmes",
@@ -24,6 +25,7 @@ export const SECTION_DATA = [
 			"Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac.",
 		text: "View More",
 		src: cartoon3,
+		rtl: false
 	},
 	{
 		title: "Registration",
@@ -31,6 +33,7 @@ export const SECTION_DATA = [
 			"Lacus, quis arcu nibh id et phasellus ut elementum. Lobortis sodales commodo amet facilisi cras velit hendrerit praesent ultrices. At metus ac.",
 		text: "Register",
 		src: cartoon,
+		rtl: true
 	},
 ];
 
