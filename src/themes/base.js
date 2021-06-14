@@ -96,5 +96,17 @@ export const theme = createMuiTheme({
 			display: "flex",
 			alignItems: "center",
 		},
+		caption: {
+			paddingLeft: "200px",
+			fontFamily: "Roboto",
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: "30px",
+			lineHeight: "8",
+			color: "#DB456B",
+			height: "57px",
+			display: "flex",
+			alignItems: "center",
+		},
 	},
 });

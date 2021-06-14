@@ -103,7 +103,7 @@ const Programmes = () => {
 			<div className={classes.join}>
 				<Grid container spacing={1}>
 					<Grid item md={4} xs={6}>
-						<Typography variant="subtitle2">Why join?</Typography>
+						<Typography variant="caption">Why join?</Typography>
 					</Grid>
 					<Grid item md={4} xs={6}>
 						<Typography variant="body2">
