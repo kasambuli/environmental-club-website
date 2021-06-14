@@ -1,21 +1,29 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles({
-    button: {
-        backgroundColor: "black",
-        color: "white",
-        borderRadius: "30px",
-        paddingRight: "30px",
-        paddingLeft: "30px",
-        paddingTop:"10px",
-        paddingBottom: "10px",
-        marginRight:"10px",
-        border:"0px"
+	button: {
+		width: "155.93px",
+		height: "46px",
+		left: "1086px",
+		top: "25px",
+		background: "#DB456B",
+		borderRadius: "90px",
+		border: "0px",
+	},
+});
 
-    }
-})
-const Buttons = ({ text }) => {
-    const classes = useStyles();
-    return <button className={classes.button}>{text}</button>
-}
-export default Buttons
+const Button = ({ text }) => {
+	const classes = useStyles();
+	return (
+		<button className={classes.button}>
+			<Typography variant="h2">{text}</Typography>
+		</button>
+	);
+};
+
+Button.propTypes = {
+	text: PropTypes.string.isRequired,
+};
+
+export default Button;
