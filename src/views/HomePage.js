@@ -9,16 +9,16 @@ import {
 	SECTION_DATA as sectionData,
 	HEADER_IMAGES as headerImages,
 	PARTNER_IMAGES as partnerImages,
-	CAROUSEL_IMAGES as carouselImages
+	CAROUSEL_IMAGES as carouselImages,
 } from "../data/constants";
-import image7 from "../assets/image7.svg"
+import image7 from "../assets/image7.svg";
 import { Carousel as ReactCarousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const useStyles = makeStyles(() => ({
 	partners: {
 		marginLeft: "45px",
-		padding: "50px 0 120px 0"
+		padding: "50px 0 120px 0",
 	},
 	header: {
 		height: "600px",
@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
 		boxSizing: "border-box",
 	},
 	navbar: {
-		background: "#E5E5E5"
+		background: "#E5E5E5",
 	},
 	headerImages: {
 		margin: "-124px 0px 0px 100px",
@@ -39,8 +39,8 @@ const useStyles = makeStyles(() => ({
 		opacity: "0.7",
 		borderRadius: "100px",
 		color: "#black",
-		textAlign: "center"
-	}
+		textAlign: "center",
+	},
 }));
 const HomePage = () => {
 	const classes = useStyles();
@@ -50,12 +50,18 @@ const HomePage = () => {
 				<Header />
 			</div>
 			<div className={classes.header}>
-				<Image src={image7} height="600px" width="1520px" />
+				<Image src={image7} height="600px" width="100%" />
 			</div>
 			<div className={classes.headerImages}>
-				<Grid container spacing={1} direction="row" justify="center" alignItems="flex-end">
+				<Grid
+					container
+					spacing={1}
+					direction="row"
+					justify="center"
+					alignItems="flex-end"
+				>
 					{headerImages.map(({ text, src }, i) => (
-						<Grid item md={3} xl={3} xs={12} sm={6} key={i} >
+						<Grid item md={3} xl={3} xs={12} sm={6} key={i}>
 							<div className={classes.overlay}>
 								<Image src={src} text={text} width="258px" height="200px" />
 							</div>
@@ -64,15 +70,22 @@ const HomePage = () => {
 				</Grid>
 			</div>
 
-			{sectionData.map(({ title, content, text, src }, i) => (
-				<Section title={title} content={content} text={text} src={src} key={i} />
+			{sectionData.map(({ title, content, text, src, rtl, left }, i) => (
+				<Section
+					title={title}
+					content={content}
+					text={text}
+					src={src}
+					rtl={rtl}
+					left={left}
+					key={i}
+				/>
 			))}
 			<ReactCarousel autoPlay showArrows={true}>
 				{carouselImages.map(({ src, content }, i) => (
 					<Carousel src={src} content={content} key={i} />
 				))}
 			</ReactCarousel>
-
 
 			<div className={classes.partners}>
 				<Typography variant="h3">Our Partners</Typography>

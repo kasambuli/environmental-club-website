@@ -1,5 +1,5 @@
 import { makeStyles, Typography } from "@material-ui/core";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles({
 	button: {
@@ -7,14 +7,13 @@ const useStyles = makeStyles({
 		height: "46px",
 		left: "1086px",
 		top: "25px",
-		background: "#282335",
+		background: "#DB456B",
 		borderRadius: "90px",
-		border: "0px"
-	}
+		border: "0px",
+	},
 });
 
 const Button = ({ text }) => {
-
 	const classes = useStyles();
 	return (
 		<button className={classes.button}>
@@ -24,7 +23,7 @@ const Button = ({ text }) => {
 };
 
 Button.propTypes = {
-	text: PropTypes.string.isRequired
-}
+	text: PropTypes.string.isRequired,
+};
 
 export default Button;

@@ -7,13 +7,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
 	return (
-		<div className="container">
+		<div style={{ overflow: "hidden"}}>
 			<Router>
 				<Switch>
-					<Route component={SignIn} path={'/signin'} exact />
-					<Route component={Registration} path={'/register'} exact />
-					<Route component={HomePage} path={'/'} exact />
-					<Route component={Programmes} path={'/programmes'} exact />
+					<Route component={SignIn} path={"/signin"} exact />
+					<Route component={Registration} path={"/register"} exact />
+					<Route component={HomePage} path={"/"} exact />
+					<Route component={Programmes} path={"/programmes"} exact />
 				</Switch>
 			</Router>
 		</div>

@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(() => ({
 	root: {
@@ -12,10 +12,9 @@ const useStyles = makeStyles(() => ({
 		fontSize: "24px",
 		lineHeight: "28px",
 		color: "#000000",
-		marginBottom: "80px"
-	}
-
-}))
+		marginBottom: "80px",
+	},
+}));
 
 const Program = ({ content }) => {
 	const classes = useStyles();
@@ -27,7 +26,7 @@ const Program = ({ content }) => {
 };
 
 Program.propTypes = {
-	content: PropTypes.string.isRequired
-}
+	content: PropTypes.string.isRequired,
+};
 
 export default Program;
