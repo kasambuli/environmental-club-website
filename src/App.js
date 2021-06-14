@@ -1,23 +1,18 @@
-import "./App.css";
-import Programmes from "./views/Programmes";
-import HomePage from "./views/HomePage";
-import SignIn from "./views/Authentication/SignIn";
-import Registration from "./views/Authentication/Registration";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css';
+import Programmes from './views/Programmes'
+import HomePage from './views/HomePage'
+import SignIn from './views/Authentication/SignIn'
+import Registration from './views/Authentication/Registration'
 
 function App() {
-	return (
-		<div style={{ overflow: "hidden"}}>
-			<Router>
-				<Switch>
-					<Route component={SignIn} path={"/signin"} exact />
-					<Route component={Registration} path={"/register"} exact />
-					<Route component={HomePage} path={"/"} exact />
-					<Route component={Programmes} path={"/programmes"} exact />
-				</Switch>
-			</Router>
-		</div>
-	);
+  return (
+    <div className="container">
+      <HomePage />
+      {/* <SignIn /> */}
+      {/* <Registration /> */}
+      {/* <Programmes /> */}
+    </div>
+  );
 }
 
 export default App;

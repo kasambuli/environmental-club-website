@@ -1,76 +1,39 @@
-import Image from "./Image";
-import { Grid, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-	FOOTER_LIST_ITEMS as listItems,
-	CONTACT_ITEMS as contactItems,
-} from "../data/constants";
-import {
-	AiFillFacebook,
-	AiFillInstagram,
-	AiFillTwitterCircle,
-	AiFillMail,
-} from "react-icons/ai";
-import logo from "../assets/logo.svg";
-
-const useStyles = makeStyles({
-	footer: {
-		height: "318px",
-		left: "0px",
-		top: "2431px",
-		background: "#282335",
-		color: "#63DBD2",
-	},
-	logo: {
-		marginTop: "50px",
-		display: "flex",
-		justifyContent: "center",
-	},
-});
+import Image from './Image'
+import { Grid } from '@material-ui/core';
 const Footer = () => {
-	const classes = useStyles();
-	return (
-		<div className={classes.footer}>
-			<Grid container spacing={1}>
-				<Grid item md={3} xl={3} xs={12} sm={6} className={classes.logo}>
-					<Image src={logo} height="40px" width="40px" alt="logo" />
-				</Grid>
-				<Grid item md={3} xl={3} xs={12} sm={6}>
-					<Typography variant="h4">Quick Links</Typography>
-					{listItems.map(({ link }, i) => (
-						<Typography variant="h5" key={i}>
-							{link}
-						</Typography>
-					))}
-				</Grid>
-				<Grid item md={3} xl={3} xs={12} sm={6}>
-					<Typography variant="h4">Contact Us</Typography>
-					{contactItems.map(({ contact }, i) => (
-						<Typography variant="h5" key={i}>
-							{contact}{" "}
-						</Typography>
-					))}
-				</Grid>
-				<Grid item md={3} xl={3} xs={12} sm={6}>
-					<Typography variant="h4">Connect</Typography>
-					<Grid container spacing={1}>
-						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillMail size={30} />
-						</Grid>
-						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillTwitterCircle size={30}/>
-						</Grid>
-						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillInstagram size={30}/>
-						</Grid>
-						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillFacebook size={30}/>
-						</Grid>
-					</Grid>
-				</Grid>
-			</Grid>
-		</div>
-	);
-};
+    return (
+        <div>
+            <Grid container spacing={1}>
+                <Grid item md={3} xl={3} xs={12} sm={6}>
+                    <img src="#" alt="logo" />LOGO
+            </Grid>
+                <Grid item md={3} xl={3} xs={12} sm={6}>
+                    <ul>Quick Links
+                <li>Link 1</li>
+                        <li>Link 2</li>
+                        <li>Link 3</li>
+                        <li>Link 4</li>
+                    </ul>
+                </Grid>
+                <Grid item md={3} xl={3} xs={12} sm={6}>
+                    <ul> Contact Us
+                <li>Email</li>
+                        <li>Location</li>
+                        <li>Phone</li>
+                    </ul>
+                </Grid>
+                <Grid item md={3} xl={3} xs={12} sm={6}>
+                    <Grid container spacing={1}>
+                        <p>Connect</p>
+                        <Image src="https://via.placeholder.com/50" />
+                        <Image src="https://via.placeholder.com/50" />
+                        <Image src="https://via.placeholder.com/50" />
+                        <Image src="https://via.placeholder.com/50" />
+                    </Grid>
+                </Grid>
+            </Grid>
+        </div>
+    )
+}
 
-export default Footer;
+export default Footer
