@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
 		"&.MuiInputBase-root": {
 			marginTop: "0px",
 			fontSize: "20px",
-			width: "300px",
+			width: "500px",
 			background: "#FFFFFF",
 			color: "#041726",
 		},
@@ -49,7 +49,6 @@ const Form = ({ headingText, inputProps }) => {
 			<div className={classes.buttonSection}>
 				<Button text={headingText} />
 				<p>
-					{" "}
 					<a href="#">Forgot Password?</a>
 				</p>
 			</div>

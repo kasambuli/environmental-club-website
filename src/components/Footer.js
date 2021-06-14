@@ -55,16 +55,16 @@ const Footer = () => {
 					<Typography variant="h4">Connect</Typography>
 					<Grid container spacing={1}>
 						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillMail />
+							<AiFillMail size={30} />
 						</Grid>
 						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillTwitterCircle />
+							<AiFillTwitterCircle size={30}/>
 						</Grid>
 						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillInstagram />
+							<AiFillInstagram size={30}/>
 						</Grid>
 						<Grid item md={3} xl={3} xs={12} sm={6}>
-							<AiFillFacebook />
+							<AiFillFacebook size={30}/>
 						</Grid>
 					</Grid>
 				</Grid>

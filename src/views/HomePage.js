@@ -50,7 +50,7 @@ const HomePage = () => {
 				<Header />
 			</div>
 			<div className={classes.header}>
-				<Image src={image7} height="600px" width="1520px" />
+				<Image src={image7} height="600px" width="100%" />
 			</div>
 			<div className={classes.headerImages}>
 				<Grid
@@ -70,13 +70,14 @@ const HomePage = () => {
 				</Grid>
 			</div>
 
-			{sectionData.map(({ title, content, text, src, rtl }, i) => (
+			{sectionData.map(({ title, content, text, src, rtl, left }, i) => (
 				<Section
 					title={title}
 					content={content}
 					text={text}
 					src={src}
 					rtl={rtl}
+					left={left}
 					key={i}
 				/>
 			))}

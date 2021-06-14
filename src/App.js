@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
 	return (
-		<div className="container">
+		<div style={{ overflow: "hidden"}}>
 			<Router>
 				<Switch>
 					<Route component={SignIn} path={"/signin"} exact />

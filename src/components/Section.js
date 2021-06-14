@@ -12,9 +12,6 @@ const useStyles = makeStyles({
 		position: "absolute",
 		left: "280px",
 	},
-	image2: {
-		right: "280px"
-	},
 	loremIpsum: {
 		width: "500px",
 	},
@@ -26,25 +23,25 @@ const ImageGrid = ({ src, rtl = true }) => {
 			{rtl ? <div className={classes.image}>
 				<Image src={src} height="242px" width="436px" />
 			</div> :
-				<div className={classes.image2}>
+				<div>
 					<Image src={src} height="242px" width="436px" />
 				</div>}
 		</Grid>)
 }
-const ContentGrid = ({ title, content, text }) => {
+const ContentGrid = ({ title, content, text, left }) => {
 	const classes = useStyles();
 	return (
-		<Grid item md={6} xl={6} xs={6} sm={6}>
+		<Grid item md={6} xl={6} xs={6} sm={6} style={{ paddingLeft: left }}>
 			<Typography variant="h6">{title}</Typography>
-			<Typography variant="body2" className={classes.loremIpsum}>
+			<Typography variant="body2" className={classes.loremIpsum} >
 				{content}
 			</Typography>
 			<Button text={text} />
 		</Grid>)
 }
 
-const Section = ({ title, content, text, src, rtl = true }) => {
-	const contentGripProps = { title, content, text }
+const Section = ({ title, content, text, src, left, rtl = true }) => {
+	const contentGripProps = { title, content, text, left }
 	const classes = useStyles();
 	return (
 		<div className={classes.section}>
@@ -61,6 +58,7 @@ Section.propTypes = {
 	text: PropTypes.string.isRequired,
 	src: PropTypes.string.isRequired,
 	rtl: PropTypes.boolean,
+	left: PropTypes.number.isRequired
 };
 ImageGrid.propTypes = {
 	src: PropTypes.string.isRequired,
@@ -70,6 +68,7 @@ ContentGrid.propTypes = {
 	title: PropTypes.string.isRequired,
 	content: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
+	left: PropTypes.number.isRequired
 };
 
 export default Section;
